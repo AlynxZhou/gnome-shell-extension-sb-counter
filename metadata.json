@@ -1,0 +1,8 @@
+{
+  "name": "SB Counter",
+  "description": "A counter to count how many times you are interrupted by SBs.",
+  "uuid": "sbcounter@alynx.one",
+  "shell-version": [
+    "44"
+  ]
+}
