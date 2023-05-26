@@ -29,7 +29,7 @@ const Indicator = GObject.registerClass(
       super._init();
 
       this._monitor = monitor;
-
+      this._overviewHiddenID = 0;
       this._label = new St.Label({
         "style_class": "osd-monitor-label",
         "text": text
@@ -44,7 +44,6 @@ const Indicator = GObject.registerClass(
       // so we also need to check `Main.layoutManager._startingUp`.
       if (Main.layoutManager._inOverview || Main.layoutManager._startingUp) {
         this._overviewHiddenID = Main.overview.connect("hidden", () => {
-          log("Overview hidden!");
           this._update_position();
           if (this._overviewHiddenID !== 0) {
             Main.overview.disconnect(this._overviewHiddenID);
