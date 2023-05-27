@@ -21,3 +21,5 @@ $ git clone https://github.com/AlynxZhou/gnome-shell-extension-sb-counter.git ~/
 ```
 
 And bind any keybinding to `~/.local/share/gnome-shell/extensions/sbcounter@alynx.one/sbcounter-increase.js` in GNOME Control Center.
+
+Restart GNOME Shell or run `~/.local/share/gnome-shell/extensions/sbcounter@alynx.one/sbcounter-clear.js` to reset the counter.

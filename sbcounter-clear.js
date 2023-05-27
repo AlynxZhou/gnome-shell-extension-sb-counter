@@ -15,7 +15,7 @@ try {
   }
   const input = connection.get_input_stream();
   const output = connection.get_output_stream();
-  output.write_bytes(new GLib.Bytes("i"), null);
+  output.write_bytes(new GLib.Bytes("c"), null);
   connection.close(null);
 } catch (error) {
   logError(error);

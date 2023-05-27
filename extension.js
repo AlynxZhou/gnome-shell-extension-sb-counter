@@ -145,13 +145,18 @@ class Extension {
       );
       switch (request) {
       case "a":
+      case "i":
         ++this._counter;
-        for (const indicator of this._indicators) {
-          indicator.setText(`${this._counter}`);
-        }
+        break;
+      case "r":
+      case "c":
+        this.counter = 0;
         break;
       default:
         break;
+      }
+      for (const indicator of this._indicators) {
+        indicator.setText(`${this._counter}`);
       }
       // output.write_bytes(new GLib.Bytes(`${this._counter}`), null);
       connection.close(null);
